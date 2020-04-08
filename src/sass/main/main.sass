@@ -1,0 +1,35 @@
+.main
+    margin-top: 50px
+
+.section
+    padding: 20px 0 40px
+
+    &--fill
+        background: $second-color
+
+    &__title
+        overflow: hidden
+        position: relative
+        padding: 0 0 0 20%
+        margin: 0 0 24px 0
+        color: $font-second-color
+        font-weight: 400
+        font-size: 1.1rem
+        @media ( max-width: 1200px )
+            padding: 0 0 0 5%
+            
+
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            background: $font-second-color
+            height: 1px
+            width: 200%
+            top: 50%
+            transform: translateY(-50%)
+
+        &:before
+            margin-left: calc(-200% - 15px)
+        &:after
+            margin-left: 15px
