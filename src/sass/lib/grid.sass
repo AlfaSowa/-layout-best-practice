@@ -3,9 +3,14 @@
     flex-wrap: wrap
 
     &__item
-        flex: 1 0 33.333333%
-        max-width: 33.333333%
+        flex: 1 0 100%
+        max-width: 100%
         padding: 20px
+
+        @include desctop
+            flex: 1 0 33.333333%
+            max-width: 33.333333%
+
 
 .card
     position: relative

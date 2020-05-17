@@ -7,269 +7,7 @@
         <meta name="theme-color" content="#fff" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <title>layout-best-practice</title>
-        <style>
-            a {
-                text-decoration: none;
-            }
-
-            li {
-                list-style: none;
-            }
-
-            h1,
-            h2 {
-                margin: 0;
-            }
-
-            .btn {
-                border: none;
-                background: #f1f1f1;
-                border-radius: 8px;
-                padding: 5px 8px;
-                color: #0d4477;
-                cursor: pointer;
-            }
-            .btn:hover {
-                background: #0d4477;
-                color: #f1f1f1;
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                background: #f1f1f1;
-                font: 16px/1 "Ubuntu", sans-serif;
-            }
-            body.fixed {
-                overflow: hidden;
-            }
-
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
-            .sidebar__link {
-                color: #000000;
-            }
-            .sidebar__link--active {
-                color: green;
-            }
-
-            svg {
-                width: 100%;
-                height: 100%;
-            }
-
-            .header__bg {
-                position: absolute;
-                left: 0;
-                top: -40px;
-                background: #3a96ec;
-                width: 100%;
-                height: 180px;
-                border-radius: 0 0 20px 20px;
-                transform: rotate(-3deg);
-                box-shadow: 0px 23px 17px -22px rgba(0, 0, 0, 0.3);
-            }
-            .header__container {
-                height: 50px;
-                display: flex;
-                align-items: center;
-                position: relative;
-            }
-            .header__top {
-                position: fixed;
-                width: 100%;
-                padding: 0 8px;
-                background: #3a96ec;
-                z-index: 100;
-            }
-            .header__bottom {
-                padding: 50px 0 0 0;
-                background: #83ccee;
-            }
-            .header--dropdown {
-                height: 60px;
-            }
-
-            .logo {
-                color: #fff;
-                fill: #fff;
-                display: flex;
-                align-items: center;
-                transition: all 0.3s ease-in-out;
-                margin: 0 auto 0 0;
-            }
-            .logo--active {
-                color: #0d4477;
-                fill: #0d4477;
-            }
-            .logo__icon {
-                width: 30px;
-                height: 30px;
-            }
-            .logo__text {
-                text-transform: uppercase;
-                margin: 0 0 0 8px;
-                font-weight: 700;
-            }
-
-            .menu {
-                margin: 0 20px 0 0;
-            }
-            @media (max-width: 768px) {
-                .menu {
-                    margin: 0;
-                    background: #3a96ec;
-                    position: fixed;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    top: 50px;
-                    overflow-y: auto;
-                    display: none;
-                }
-                .menu--active {
-                    display: block;
-                }
-            }
-            .menu__list {
-                display: flex;
-                align-items: center;
-            }
-            @media (max-width: 768px) {
-                .menu__list {
-                    flex-direction: column;
-                }
-            }
-            @media (max-width: 768px) {
-                .menu__item {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 40px;
-                }
-            }
-            @media (min-width: 768px) {
-                .menu__item:not(:last-child) {
-                    margin: 0 16px 0 0;
-                }
-            }
-            .menu__link {
-                color: #fff;
-            }
-            .menu__link:hover {
-                color: #0d4477;
-            }
-
-            .social {
-                display: flex;
-            }
-            .social__item {
-                width: 30px;
-                height: 30px;
-                background: #000;
-                cursor: pointer;
-            }
-            .social__item:not(:last-child) {
-                margin: 0 8px 0 0;
-            }
-
-            .hero {
-                padding: 30px 20px;
-                display: flex;
-            }
-            @media (max-width: 768px) {
-                .hero {
-                    flex-direction: column;
-                }
-            }
-            .hero__title {
-                margin: 0 0 24px 0;
-            }
-            .hero__left {
-                flex: 1 0 600px;
-            }
-            @media (max-width: 768px) {
-                .hero__left {
-                    flex: 1;
-                    max-width: none;
-                }
-            }
-            .hero__right {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 0 0 50px;
-            }
-            @media (max-width: 768px) {
-                .hero__right {
-                    order: -1;
-                    margin: 0 0 50px 0;
-                }
-            }
-            .hero__right-icon {
-                width: 150px;
-                height: 150px;
-            }
-            .hero__bottom {
-                display: flex;
-                margin: 16px -8px 0;
-            }
-            .hero__bottom-item {
-                flex: 1;
-                padding: 0 8px;
-            }
-
-            .burger {
-                width: 30px;
-                height: 25px;
-                cursor: pointer;
-                position: relative;
-                margin: 0 0 0 20px;
-            }
-            .burger__item {
-                width: 100%;
-                height: 4px;
-                background: #f1f1f1;
-                position: absolute;
-                transform-origin: 0 50%;
-                transition: all 0.1s ease-in-out;
-            }
-            .burger__item:nth-child(1) {
-                top: 0;
-            }
-            .burger__item:nth-child(2) {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .burger__item:nth-child(3) {
-                bottom: 0;
-            }
-            .burger--active > :nth-child(1) {
-                transform: rotate(45deg);
-            }
-            .burger--active > :nth-child(2) {
-                width: 0;
-            }
-            .burger--active > :nth-child(3) {
-                transform: rotate(-45deg);
-            }
-            @media (min-width: 768px) {
-                .burger {
-                    display: none;
-                }
-            }
-        </style>
-        <link href="main.css" rel="stylesheet" />
-    </head>
+    <link href="main.css" rel="stylesheet"></head>
     <body>
         <div aria-hidden="true" style="position: absolute; width: 0; height: 0;">
             <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -362,28 +100,6 @@
                                 excepturi, perspiciatis, maiores veniam.
                             </p>
                         </div>
-
-                        <div class="hero__bottom">
-                            <div class="hero__bottom-item">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quis ut veniam accusantium
-                                    quasi esse vel dignissimos magnam! Labore, magni?
-                                </p>
-                            </div>
-                            <div class="hero__bottom-item">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum quo soluta.
-                                    Quia.
-                                </p>
-                            </div>
-                            <div class="hero__bottom-item">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos tenetur officia eum? Adipisci
-                                    provident esse eaque necessitatibus, distinctio facere iste, nisi odit non quae quaerat! Ea,
-                                    quia!
-                                </p>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="hero__right">
@@ -404,13 +120,6 @@
                             <div class="card">
                                 <div class="card__inner">
                                     <div class="card__img"></div>
-                                    <div class="card__body">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ducimus officiis dicta
-                                        magnam a amet, accusamus praesentium dolor vitae voluptate esse voluptatem deserunt
-                                        dolorem iste ad, dignissimos voluptas nisi et quis, animi officia repellat commodi
-                                        pariatur aspernatur? Consequatur voluptate a aliquam assumenda nulla minima rerum, in
-                                        voluptas nisi, explicabo labore.
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -418,9 +127,6 @@
                             <div class="card">
                                 <div class="card__inner">
                                     <div class="card__img"></div>
-                                    <div class="card__body">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, unde.
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -428,12 +134,6 @@
                             <div class="card">
                                 <div class="card__inner">
                                     <div class="card__img"></div>
-                                    <div class="card__body">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit rerum animi sint
-                                        quaerat architecto vel consequuntur ipsum quia incidunt! Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Quae suscipit rerum animi sint quaerat architecto vel
-                                        consequuntur ipsum quia incidunt!
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -441,81 +141,12 @@
                             <div class="card">
                                 <div class="card__inner">
                                     <div class="card__img"></div>
-                                    <div class="card__body">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam voluptates eaque rerum.
-                                        Accusamus beatae possimus vel unde ullam odio ea explicabo fugiat suscipit ex nulla,
-                                        assumenda velit nam repudiandae? Labore perspiciatis consectetur maiores tempora! Lorem
-                                        ipsum dolor sit amet consectetur, adipisicing elit. Ipsam voluptates eaque rerum.
-                                        Accusamus beatae possimus vel unde ullam odio ea explicabo fugiat suscipit ex nulla,
-                                        assumenda velit nam repudiandae? Labore perspiciatis consectetur maiores tempora! Lorem
-                                        ipsum dolor sit amet consectetur, adipisicing elit. Ipsam voluptates eaque rerum.
-                                        Accusamus beatae possimus vel unde ullam odio ea explicabo fugiat suscipit ex nulla,
-                                        assumenda velit nam repudiandae? Labore perspiciatis consectetur maiores tempora!
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section__title">Setion number one title</h2>
-                <div class="section__body container">
-                    <div class="sidebar">
-                        <ul class="sidebar__list">
-                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
-                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
-                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
-                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
-                        </ul>
                     </div>
                 </div>
             </section>
         </main>
-
-        <footer class="footer">
-            <div class="footer__item">asdas</div>
-            <div class="footer__item">
-                <div class="footer__title">qweqweqweq</div>
-                <ul class="footer__list">
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                </ul>
-            </div>
-            <div class="footer__item">
-                <div class="footer__title">qweqweqweq</div>
-                <ul class="footer__list">
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                </ul>
-            </div>
-            <div class="footer__item">
-                <div class="footer__title">qweqweqweq</div>
-                <ul class="footer__list">
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                    <li class="footer__list-item">12312</li>
-                </ul>
-            </div>
-        </footer>
-
-        <div class="modal">
-            <div class="modal__inner">
-                <div class="modal__content">
-                    <div class="modal__close"></div>
-                    <form class="form" action="#">aaqweqwe</form>
-                </div>
-            </div>
-        </div>
-        <script src="main.js"></script>
-    </body>
+    <script src="main.js"></script></body>
 </html>
