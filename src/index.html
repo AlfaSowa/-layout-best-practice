@@ -7,7 +7,6 @@
         <meta name="theme-color" content="#fff" />
         <link rel="icon" href="favicon.ico" type="image/ico" />
         <title>layout-best-practice</title>
-
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
     </head>
     <body>
@@ -48,23 +47,12 @@
             <div class="header__top">
                 <div class="header__container container">
                     <a class="logo" href="#">
-                        <svg class="logo__icon">
-                            <use xlink:href="#logo"></use>
-                        </svg>
-                        <span class="logo__text">Best landing ever</span>
-                    </a>
-
-                    <div class="dropdown">
-                        <div class="dropdown__toggler">dropdown</div>
-                        <div class="dropdown__menu">
-                            <ul class="dropdown__list">
-                                <li class="dropdown__item">dropdown item</li>
-                                <li class="dropdown__item">dropdown item</li>
-                                <li class="dropdown__item">dropdown item</li>
-                                <li class="dropdown__item">dropdown item</li>
-                            </ul>
+                        <div class="logo__icon">
+                            <svg><use xlink:href="#logo"></use></svg>
                         </div>
-                    </div>
+
+                        <span class="logo__text">Logo</span>
+                    </a>
 
                     <nav class="menu">
                         <ul class="menu__list">
@@ -80,51 +68,67 @@
                             <li class="menu__item">
                                 <a class="menu__link" href="#">fourth item</a>
                             </li>
-                        </ul>
-                    </nav>
-
-                    <button class="btn header__btn">register/log in</button>
-                    <button class="btn header__btn">Contact Us</button>
-                </div>
-
-                <div class="header__container header--dropdown container">
-                    <nav class="menu menu--down">
-                        <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link" href="#">first item</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">second item</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">third item</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">fourth item</a>
+                                <a class="menu__link" href="#">five item</a>
                             </li>
                         </ul>
                     </nav>
+
+                    <div class="social">
+                        <div class="social__item"></div>
+                        <div class="social__item"></div>
+                    </div>
+
+                    <div class="burger">
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                    </div>
                 </div>
             </div>
 
             <div class="header__bottom">
-                <div class="header__hero container">
-                    <div class="header__hero-left">
-                        <h1 class="header__title">Best title in the world</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, omnis enim velit autem soluta nobis
-                            expedita non eaque vitae dolor quisquam. Mollitia error nemo reiciendis magni, laudantium itaque
-                            laborum, alias veritatis autem labore quisquam dolorem voluptatibus sunt quos amet distinctio
-                            voluptate porro dolores. Aliquam quia esse, totam error numquam nulla dolore voluptates quidem.
-                            Voluptatem quidem non accusamus earum et cumque esse nisi, laudantium accusantium voluptas animi
-                            excepturi, perspiciatis, maiores veniam.
-                        </p>
+                <div class="hero container">
+                    <div class="hero__left">
+                        <div class="hero__top">
+                            <h1 class="hero__title">Best title in the world</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, omnis enim velit autem soluta nobis
+                                expedita non eaque vitae dolor quisquam. Mollitia error nemo reiciendis magni, laudantium itaque
+                                laborum, alias veritatis autem labore quisquam dolorem voluptatibus sunt quos amet distinctio
+                                voluptate porro dolores. Aliquam quia esse, totam error numquam nulla dolore voluptates quidem.
+                                Voluptatem quidem non accusamus earum et cumque esse nisi, laudantium accusantium voluptas animi
+                                excepturi, perspiciatis, maiores veniam.
+                            </p>
+                        </div>
+
+                        <div class="hero__bottom">
+                            <div class="hero__bottom-item">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quis ut veniam accusantium
+                                    quasi esse vel dignissimos magnam! Labore, magni?
+                                </p>
+                            </div>
+                            <div class="hero__bottom-item">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatum quo soluta.
+                                    Quia.
+                                </p>
+                            </div>
+                            <div class="hero__bottom-item">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos tenetur officia eum? Adipisci
+                                    provident esse eaque necessitatibus, distinctio facere iste, nisi odit non quae quaerat! Ea,
+                                    quia!
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="header__hero-right">
-                        <svg class="header__hero-icon">
-                            <use xlink:href="#logo"></use>
-                        </svg>
+                    <div class="hero__right">
+                        <div class="hero__right-icon">
+                            <svg><use xlink:href="#logo"></use></svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -197,22 +201,59 @@
             <section class="section">
                 <h2 class="section__title">Setion number one title</h2>
                 <div class="section__body container">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates nulla delectus totam rem velit facilis
-                    earum! Repellendus ipsa laudantium alias fuga nam, id sunt nisi, ducimus beatae voluptatibus rem placeat
-                    voluptates obcaecati aliquid? Ipsam nisi optio commodi quidem delectus nesciunt unde. Libero temporibus
-                    corrupti qui, ut enim perferendis ratione dolorem quibusdam alias molestiae quod a consectetur aliquid earum.
-                    Obcaecati optio recusandae repellat? Veritatis tempore animi illum possimus asperiores, ullam labore
-                    temporibus ve.
+                    <div class="sidebar">
+                        <ul class="sidebar__list">
+                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
+                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
+                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
+                            <li class="sidebar__item"><a class="sidebar__link" href="#">asdasdasdas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__item">asdas</div>
+            <div class="footer__item">
+                <div class="footer__title">qweqweqweq</div>
+                <ul class="footer__list">
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">qweqweqweq</div>
+                <ul class="footer__list">
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__title">qweqweqweq</div>
+                <ul class="footer__list">
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                    <li class="footer__list-item">12312</li>
+                </ul>
+            </div>
+        </footer>
 
-        <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"
-        ></script>
+        <div class="modal">
+            <div class="modal__inner">
+                <div class="modal__content">
+                    <div class="modal__close"></div>
+                    <form class="form" action="#">aaqweqwe</form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

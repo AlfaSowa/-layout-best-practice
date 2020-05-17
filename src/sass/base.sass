@@ -6,7 +6,21 @@
 body
     background: $main-color
     font: $font
+    &.fixed
+        overflow: hidden
 
 .container
     max-width: 1200px
     margin: 0 auto
+
+
+
+.sidebar
+    &__link
+        color: #000000
+        &--active
+            color: green
+
+svg
+    width: 100%
+    height: 100%

@@ -1,8 +1,16 @@
 .main
-    margin-top: 50px
 
 .section
-    padding: 20px 0 40px
+    padding: 30px 0
+
+    &__left
+        flex: 1 0 400px 
+        max-width: 400px 
+        height: 100px
+        background: #000
+    &__right
+        flex: 1
+        background: #464646
 
     &--fill
         background: $second-color
@@ -33,3 +41,6 @@
             margin-left: calc(-200% - 15px)
         &:after
             margin-left: 15px
+
+.details
+    display: flex

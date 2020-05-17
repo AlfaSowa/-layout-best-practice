@@ -1,9 +1,19 @@
-$header-top-height: 60px
-
 .header
 
+    &__bg
+        position: absolute
+        left: 0
+        top: -40px
+        background: $second-color
+        width: 100%
+        height: $header-top-main + $header-top-second + 70px
+        border-radius: 0 0 20px 20px
+        transform: rotate(-3deg)
+        box-shadow: 0px 23px 17px -22px rgba(0,0,0,0.3)
+
+
     &__container
-        height: $header-top-height
+        height: $header-top-main
         display: flex
         align-items: center
         position: relative
@@ -11,46 +21,24 @@ $header-top-height: 60px
     &__top
         position: fixed
         width: 100%
-        padding: 0 20px
+        padding: 0 8px
         background: $second-color
         z-index: 100
     
     &__bottom
-        padding: $header-top-height * 2 20px 0 20px
+        padding: $header-top-main 0 0 0
         background: #83ccee
-    
-    &__btn
-        margin: 0 0 0 16px
-    
-    &__hero
-        padding: 50px 0
-        display: flex
-
-        &-left
-            flex: 1
-            max-width: 500px
-
-        &-right
-            flex: 1
         
-        &-icon
-            width: 100%
-            height: 100%
-
-    &__title
-        margin: 0 0 24px 0
-
     &--dropdown
-        height: 30px
-    
-    
-    
+        height: $header-top-second
+        
 .logo
     color: $font-add-color
     fill: $font-add-color
     display: flex
     align-items: center
     transition: all .3s ease-in-out
+    margin: 0 auto 0 0
 
     &--active
         color: $details-color

@@ -1,0 +1,33 @@
+.modal
+    position: fixed
+    overflow-y: auto
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: #000
+    z-index: 1000
+    display: none
+
+    &__inner
+        padding: 40px 20px 60px
+        position: relative
+
+    &__content
+
+    &__close
+        position: absolute
+        width: 40px
+        height: 40px
+        background: red
+        cursor: pointer
+        top: 0
+        right: 0
+
+    &--active
+        display: block
+
+.form
+    margin: 0 auto
+    max-width: 700px
+    background: #fff

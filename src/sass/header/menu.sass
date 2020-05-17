@@ -1,56 +1,41 @@
 .menu
-    margin-left: auto
+    margin: 0 20px 0 0
 
-    &--down
+
+    @include mobile
         margin: 0
+        background: $second-color
+        position: fixed
+        left: 0
+        right: 0
+        bottom: 0
+        top: $header-top-main
+        overflow-y: auto
+        display: none
+
+        &--active
+            display: block
 
     &__list
         display: flex
         align-items: center
+        @include mobile
+            flex-direction: column
     
     &__item
-        &:not(:last-child)
-            margin: 0 16px 0 0
+        @include mobile
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 40px
+
+        @include desctop
+            &:not(:last-child)
+                margin: 0 16px 0 0
+
 
     &__link
         color: $font-add-color
         &:hover
             color: $details-color
-
-.dropdown
-    margin: 0 0 0 16px
-    cursor: pointer
-    height: 100%
-    display: flex
-    align-items: center
-    &:hover
-        .dropdown
-            &__menu
-                display: flex
-            &__toggler
-                color: red
-
-    &__toggler
-        color: #fff
-
-    &__menu
-        display: none
-        position: absolute
-        top: 100%   
-        left: 0
-        z-index: 20
-        width: 100%
-        color: #fff
-        background: $second-color
-
-    &__list
-        display: flex
-        align-items: center
-        height: 30px
-
-    &__item
-        &:not(:last-child)
-            margin: 0 16px 0 0
-        
-        &:hover
-            color: red
