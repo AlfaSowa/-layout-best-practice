@@ -1,21 +1,6 @@
 .header
-
-    &__bg
-        position: absolute
-        left: 0
-        top: -40px
-        background: $second-color
-        width: 100%
-        height: $header-top-main + $header-top-second + 70px
-        border-radius: 0 0 20px 20px
-        transform: rotate(-3deg)
-        box-shadow: 0px 23px 17px -22px rgba(0,0,0,0.3)
-
-
     &__container
         height: $header-top-main
-        display: flex
-        align-items: center
         position: relative
     
     &__top
@@ -29,26 +14,11 @@
         padding: $header-top-main 0 0 0
         background: $details-color
         
-    &--dropdown
-        height: $header-top-second
-        
 .logo
     color: $font-add-color
     fill: $font-add-color
-    display: flex
-    align-items: center
     transition: all .3s ease-in-out
-    margin: 0 auto 0 0
 
     &--active
         color: $details-color
         fill: $details-color
-
-    &__icon
-        width: 30px
-        height: 30px
-
-    &__text
-        text-transform: uppercase
-        margin: 0 0 0 8px
-        font-weight: 700
