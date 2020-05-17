@@ -1,0 +1,58 @@
+.sidebar
+    flex: 1 0 300px
+    max-width: 300px
+    padding: 0 20px 0 0
+    @include mobile
+        max-width: none
+        padding: 0
+        flex: 1
+        margin: 0 0 20px 0
+
+    &__title
+        margin: 0 0 20px 0
+        font-size: 1.1rem
+        font-weight: 600
+
+    &__list
+        @include mobile
+            display: flex
+            flex-wrap: wrap
+    
+    &__item
+        height: 30px
+        cursor: pointer
+        display: flex
+        align-items: center
+        position: relative
+        &:before
+            content: ''
+            width: 8px
+            height: 8px
+            background: transparent
+            margin: 0 8px 0 0
+            border-radius: 50%
+
+        &:hover,
+        &--active
+            color: $second-color
+            &:before
+                background: $second-color
+
+        @include mobile
+            padding: 0 10px 
+            &:before
+                display: none
+
+    &__adopt
+        margin: 20px 0 0 0
+        >:not(:last-child)
+            margin: 0 0 8px 0
+        &-title
+            font-size: 0.9rem
+            font-weight: 600
+        &-text
+            font-size: 0.7rem
+        &-btn
+            display: flex
+            align-items: center
+

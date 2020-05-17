@@ -1,37 +1,43 @@
+$grid_grap: 5px
+
 .grid
     display: flex
     flex-wrap: wrap
+    flex: 1
+    margin: -$grid_grap
+    align-content: flex-start
 
     &__item
         flex: 1 0 100%
         max-width: 100%
-        padding: 20px
+        padding: $grid_grap
 
         @include desctop
-            flex: 1 0 33.333333%
-            max-width: 33.333333%
+            flex: 1 0 25%
+            max-width: 25%
 
+    &--adapt
+        .grid__item
+            flex: 1 0 50%
+            max-width: 50%
+            padding: 0
+            @include desctop
+                flex: 1 0 20%
+                max-width: 20%
+
+        .card
+            padding: 58% 0 0 0
+
+            &__inner
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                height: 70%
+                width: 70%
 
 .card
     position: relative
-    height: 250px
-    z-index: 9
+    cursor: pointer
 
-    &:hover
-        z-index: 10
-        .card__inner
-            max-height: none
-            background: $details-color
 
-    &__inner
-        max-height: 100%
-        min-height: 100%
-        background: $second-color
-        overflow: hidden
-
-    &__img
-        height: 150px
-        background: #000
-
-    &__body
-        padding: 20px

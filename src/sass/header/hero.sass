@@ -5,19 +5,15 @@
     &__title
         margin: 0 0 24px 0
 
-    &__left
-        flex: 1 0 600px
-        @media (max-width: 768px)
-            flex: 1
-            max-width: none
-
     &__right
-        flex: 1
+        flex: 1 0 300px
+        max-width: 300px
         display: flex
         align-items: center
         justify-content: center
-        margin: 0 0 0 50px
         @media (max-width: 768px)
+            flex: 1
+            max-width: none
             order: -1
             margin: 0 0 50px 0
 
