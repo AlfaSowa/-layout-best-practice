@@ -1,0 +1,23 @@
+.tab
+    &:before
+        content: ''
+        width: 8px
+        height: 8px
+        background: transparent
+        margin: 0 8px 0 0
+        border-radius: 50%
+
+    @include mobile
+        &:before
+            display: none
+
+    &:hover,
+    &--active
+        color: $second-color
+        &:before
+            background: $second-color
+
+    &__content
+        display: none
+        &--active
+            display: flex

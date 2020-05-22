@@ -100,19 +100,19 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link" href="#">first item</a>
+                                <a class="menu__link" href="#grid">grid</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">second item</a>
+                                <a class="menu__link" href="#sidebarright">sidebar right</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">third item</a>
+                                <a class="menu__link" href="#tabs">tabs</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">fourth item</a>
+                                <a class="menu__link" href="#adapt">adapt</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">five item</a>
+                                <a class="menu__link" href="#paragraph">paragraph</a>
                             </li>
                         </ul>
                     </nav>
@@ -156,92 +156,210 @@
         </header>
 
         <main class="main">
-            <section class="section">
-                <h2 class="section__title">Products</h2>
-                <div class="section__body container products">
-                    <div class="sidebar">
-                        <div class="sidebar__title">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
-                        <ul class="sidebar__list">
-                            <li class="sidebar__item sidebar__item--active">qwe</li>
-                            <li class="sidebar__item">asdasd asd</li>
-                            <li class="sidebar__item">asas d asdasdad</li>
-                            <li class="sidebar__item">asasasd asdad</li>
-                            <li class="sidebar__item">asdasd a asdas</li>
-                            <li class="sidebar__item">asas d asdasdad</li>
-                            <li class="sidebar__item">asdasd a das asdasd</li>
-                            <li class="sidebar__item">asdasd asd</li>
-                            <li class="sidebar__item">asdasd a das asdasd</li>
-                            <li class="sidebar__item">asasasd asdad</li>
-                            <li class="sidebar__item">asdasd a asdas</li>
-                        </ul>
-                        <div class="sidebar__adopt">
-                            <div class="sidebar__adopt-title">Lorem, ipsum dolor.</div>
-                            <div class="sidebar__adopt-text">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ex.
-                            </div>
-                            <div class="sidebar__adopt-btn">
-                                <button class="btn">заказать</button>
-                            </div>
+            <!-- -------------------  grid section ------------------- -->
+            <section class="section" id="grid">
+                <h2 class="section__title">Сетка на flexbox</h2>
+                <div class="section__body container">
+                    <div class="grid">
+                        <div class="grid__item">
+                            <div class="card">123123</div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card">asdasd</div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card">123123</div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card">asdasd</div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card">123123</div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card">asdasd</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------------  two column section with sidebar ------------------- -->
+            <section class="section" id="sidebarright">
+                <h2 class="section__title">Секция с сайдбаром справа</h2>
+
+                <div class="section__body container twocolumn">
+                    <div class="twocolumn__content">
+                        <div class="paragraph">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolore. Iste accusantium iure
+                                unde praesentium a odio quam tenetur, nemo saepe odit consequuntur officiis provident dolor,
+                                voluptate fugiat necessitatibus! Dolores et repudiandae esse quae ipsa veniam unde vero dolore?
+                                Labore eos ab eaque doloribus et rem saepe corrupti! Eveniet neque ducimus itaque placeat illo
+                                exercitationem nobis laudantium odio molestias! Deleniti, reprehenderit. Natus repudiandae aliquam
+                                dolorum minus delectus facilis doloremque exercitationem eum saepe corrupti officiis ex minima
+                                odit, ullam illo odio laboriosam eaque nesciunt, reprehenderit nisi quos. Molestiae, saepe maiores
+                                necessitatibus expedita sint delectus tempora consequuntur reprehenderit, quasi nesciunt ipsam,
+                                earum possimus sequi dignissimos odio dolorem repudiandae facilis dolores enim dolor itaque. Sequi
+                                sint eaque qui veniam eveniet ratione illum obcaecati velit hic vitae vel alias recusandae
+                                pariatur doloribus mollitia eum tenetur numquam, autem aperiam earum modi quae harum. Quasi,
+                                incidunt reprehenderit dolorem nam quidem labore iusto ducimus vel repellat dicta quod quis
+                                impedit nemo, ipsum, architecto vero recusandae atque quam minima corporis? Delectus, modi. Modi
+                                earum facilis eveniet soluta labore praesentium unde vitae perferendis repellendus sed velit
+                                adipisci a beatae quod possimus obcaecati, provident quos optio illo officiis non. Iusto maxime
+                                dicta accusamus, quidem dolor maiores itaque molestiae doloremque molestias!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolore. Iste accusantium iure
+                                unde praesentium a odio quam tenetur, nemo saepe odit consequuntur officiis provident dolor,
+                                voluptate fugiat necessitatibus! Dolores et repudiandae esse quae ipsa veniam unde vero dolore?
+                                Labore eos ab eaque doloribus et rem saepe corrupti! Eveniet neque ducimus itaque placeat illo
+                                exercitationem nobis laudantium odio molestias! Deleniti, reprehenderit. Natus repudiandae aliquam
+                                dolorum minus delectus facilis doloremque exercitationem eum saepe corrupti officiis ex minima
+                                odit, ullam illo odio laboriosam eaque nesciunt, reprehenderit nisi quos. Molestiae, saepe maiores
+                                necessitatibus expedita sint delectus tempora consequuntur reprehenderit, quasi nesciunt ipsam,
+                                earum possimus sequi dignissimos odio dolorem repudiandae facilis dolores enim dolor itaque. Sequi
+                                sint eaque qui veniam eveniet ratione illum obcaecati velit hic vitae vel alias recusandae
+                                pariatur doloribus mollitia eum tenetur numquam, autem aperiam earum modi quae harum. Quasi,
+                                incidunt reprehenderit dolorem nam quidem labore iusto ducimus vel repellat dicta quod quis
+                                impedit nemo, ipsum, architecto vero recusandae atque quam minima corporis? Delectus, modi. Modi
+                                earum facilis eveniet soluta labore praesentium unde vitae perferendis repellendus sed velit
+                                adipisci a beatae quod possimus obcaecati, provident quos optio illo officiis non. Iusto maxime
+                                dicta accusamus, quidem dolor maiores itaque molestiae doloremque molestias!
+                            </p>
                         </div>
                     </div>
 
-                    <div class="grid">
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
-                            </div>
-                        </div>
-                        <div class="grid__item">
-                            <div class="card">
-                                <div class="card__inner products__inner"></div>
+                    <div class="sidebar">
+                        <div class="sidebar__title">Какой нибудь заголовок для сайдбара</div>
+
+                        <ul class="sidebar__list">
+                            <li class="sidebar__item">Первая вкладка</li>
+                            <li class="sidebar__item">Вторая вкладка</li>
+                        </ul>
+
+                        <div class="sidebar__adopt">
+                            <div class="sidebar__adopt-title">Раздел дополнительной информации</div>
+
+                            <p class="sidebar__adopt-text">Если вы не нашли нужную вам карточку напишите нам</p>
+
+                            <div class="sidebar__adopt-btn">
+                                <button class="btn">написать нам</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section">
-                <h2 class="section__title">Setion</h2>
+            <!-- -------------------  tabs section ------------------- -->
+            <section class="section" id="tabs">
+                <h2 class="section__title">Табы - вкладки и сайдбаром слева</h2>
+
+                <div class="section__body container twocolumn">
+                    <div class="sidebar">
+                        <div class="sidebar__title">Какой нибудь заголовок для сайдбара</div>
+
+                        <ul class="sidebar__list">
+                            <li data-id="one" class="sidebar__item tab tab--active">Первая вкладка</li>
+                            <li data-id="two" class="sidebar__item tab">Вторая вкладка</li>
+                        </ul>
+
+                        <div class="sidebar__adopt">
+                            <div class="sidebar__adopt-title">Раздел дополнительной информации</div>
+
+                            <p class="sidebar__adopt-text">Если вы не нашли нужную вам карточку напишите нам</p>
+
+                            <div class="sidebar__adopt-btn">
+                                <button class="btn">написать нам</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="twocolumn__content">
+                        <div data-id="one" class="grid tab__content tab__content--active">
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-id="two" class="grid tab__content">
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid__item">
+                                <div class="card products__card">
+                                    <div class="products__img"></div>
+                                    <div class="products__content"></div>
+                                    <div class="products__bottom">
+                                        <button class="btn products__btn">Заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- -------------------  adapt grid section ------------------- -->
+            <section class="section" id="adapt">
+                <h2 class="section__title">Адаптивная сетка</h2>
                 <div class="section__body container">
                     <div class="grid grid--adapt">
                         <div class="grid__item">
@@ -283,9 +401,48 @@
                 </div>
             </section>
 
-            <section class="section">
-                <h2 class="section__title">Setion</h2>
-                <div class="section__body"></div>
+            <section class="section" id="paragraph">
+                <h2 class="section__title">Параграф</h2>
+                <div class="section__body container">
+                    <div class="paragraph">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolore. Iste accusantium iure
+                            unde praesentium a odio quam tenetur, nemo saepe odit consequuntur officiis provident dolor, voluptate
+                            fugiat necessitatibus! Dolores et repudiandae esse quae ipsa veniam unde vero dolore? Labore eos ab
+                            eaque doloribus et rem saepe corrupti! Eveniet neque ducimus itaque placeat illo exercitationem nobis
+                            laudantium odio molestias! Deleniti, reprehenderit. Natus repudiandae aliquam dolorum minus delectus
+                            facilis doloremque exercitationem eum saepe corrupti officiis ex minima odit, ullam illo odio
+                            laboriosam eaque nesciunt, reprehenderit nisi quos. Molestiae, saepe maiores necessitatibus expedita
+                            sint delectus tempora consequuntur reprehenderit, quasi nesciunt ipsam, earum possimus sequi
+                            dignissimos odio dolorem repudiandae facilis dolores enim dolor itaque. Sequi sint eaque qui veniam
+                            eveniet ratione illum obcaecati velit hic vitae vel alias recusandae pariatur doloribus mollitia eum
+                            tenetur numquam, autem aperiam earum modi quae harum. Quasi, incidunt reprehenderit dolorem nam quidem
+                            labore iusto ducimus vel repellat dicta quod quis impedit nemo, ipsum, architecto vero recusandae
+                            atque quam minima corporis? Delectus, modi. Modi earum facilis eveniet soluta labore praesentium unde
+                            vitae perferendis repellendus sed velit adipisci a beatae quod possimus obcaecati, provident quos
+                            optio illo officiis non. Iusto maxime dicta accusamus, quidem dolor maiores itaque molestiae
+                            doloremque molestias!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, dolore. Iste accusantium iure
+                            unde praesentium a odio quam tenetur, nemo saepe odit consequuntur officiis provident dolor, voluptate
+                            fugiat necessitatibus! Dolores et repudiandae esse quae ipsa veniam unde vero dolore? Labore eos ab
+                            eaque doloribus et rem saepe corrupti! Eveniet neque ducimus itaque placeat illo exercitationem nobis
+                            laudantium odio molestias! Deleniti, reprehenderit. Natus repudiandae aliquam dolorum minus delectus
+                            facilis doloremque exercitationem eum saepe corrupti officiis ex minima odit, ullam illo odio
+                            laboriosam eaque nesciunt, reprehenderit nisi quos. Molestiae, saepe maiores necessitatibus expedita
+                            sint delectus tempora consequuntur reprehenderit, quasi nesciunt ipsam, earum possimus sequi
+                            dignissimos odio dolorem repudiandae facilis dolores enim dolor itaque. Sequi sint eaque qui veniam
+                            eveniet ratione illum obcaecati velit hic vitae vel alias recusandae pariatur doloribus mollitia eum
+                            tenetur numquam, autem aperiam earum modi quae harum. Quasi, incidunt reprehenderit dolorem nam quidem
+                            labore iusto ducimus vel repellat dicta quod quis impedit nemo, ipsum, architecto vero recusandae
+                            atque quam minima corporis? Delectus, modi. Modi earum facilis eveniet soluta labore praesentium unde
+                            vitae perferendis repellendus sed velit adipisci a beatae quod possimus obcaecati, provident quos
+                            optio illo officiis non. Iusto maxime dicta accusamus, quidem dolor maiores itaque molestiae
+                            doloremque molestias!
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
     </body>

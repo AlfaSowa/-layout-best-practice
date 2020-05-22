@@ -1,0 +1,17 @@
+.twocolumn
+    display: flex
+
+    &__content
+        flex: 1
+        & + .sidebar
+            padding: 0 0 0 20px
+
+        @include mobile
+            & + .sidebar
+                order: -1
+                padding: 0
+
+    
+    @include mobile
+        flex-direction: column
+    

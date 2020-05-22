@@ -1,16 +1,16 @@
-$grid_grap: 5px
+$grid_grap-top-bottom: 15px
+$grid_grap-left-right: 10px
 
 .grid
     display: flex
     flex-wrap: wrap
-    flex: 1
-    margin: -$grid_grap
+    margin: -#{$grid_grap-top-bottom} -#{$grid_grap-left-right}
     align-content: flex-start
 
     &__item
         flex: 1 0 100%
         max-width: 100%
-        padding: $grid_grap
+        padding: #{$grid_grap-top-bottom} #{$grid_grap-left-right}
 
         @include desctop
             flex: 1 0 25%

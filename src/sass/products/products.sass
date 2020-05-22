@@ -1,9 +1,56 @@
 .products
     display: flex
 
-    &__inner
-        background: $second-color
-        height: 250px
+    &__card
+        position: relative
+        &:hover
+            .products__img
+                height: 200px
+
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        background: #727070
+        height: 0
+        width: 100%
+        z-index: 1
+        transition: all .2s ease-in-out
+
+    &__content
+        position: relative
+        height: 300px
+        z-index: 2
+        border-top: 2px solid $second-color
+        border-left: 2px solid $second-color
+        border-right: 2px solid $second-color
+        padding: 0 0 25px 0
+ 
+    &__bottom
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        width: 100%
+        bottom: 0
+        left: 0
+        transform: translateY(50%)
+        z-index: 3
+        &:before,
+        &:after
+            content: ''
+            width: 100%
+            height: 2px
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            background: $second-color
+        &:before
+            right: calc(50% + 55px)
+        &:after
+            left: calc(50% + 55px)
     
-    @include mobile
-        flex-direction: column
+    &__btn
+        border-color: $second-color
+        color: $second-color
