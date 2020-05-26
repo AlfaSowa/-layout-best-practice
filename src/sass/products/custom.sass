@@ -1,0 +1,29 @@
+$custom-height: 250px
+
+.custom
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+
+    &__item
+        flex: 1 0 33.3333%
+        max-width: 33.3333%
+        height: $custom-height
+        padding: 5px
+
+        &--long
+            min-width: 66.6666%
+        &--tall
+            margin: -#{$custom-height} 0
+            height: $custom-height * 2
+
+        @include mobile
+            flex: 1 0 100%
+            max-width: none
+            margin: 0
+            height: 100px
+
+    &__card
+        background: #444
+        height: 100%
+        border-radius: 10px
