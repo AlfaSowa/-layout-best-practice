@@ -94,7 +94,7 @@ let galeryModalClose = document.querySelector(".galery__modal-close");
 
 galeryImgs.forEach((img) => {
     img.addEventListener("click", () => {
-        galeryModal.querySelector(".galery__modal-img img").src = img.src;
+        galeryModal.querySelector(".galery__modal-img img").src = `./img/${img.dataset.img}.jpg`;
         galeryModal.classList.add("galery__modal--active");
     });
 });
