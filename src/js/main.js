@@ -106,3 +106,8 @@ galeryImgs.forEach((img) => {
 galeryModalClose.addEventListener("click", () => {
     galeryModal.classList.remove("galery__modal--active");
 });
+
+$(".slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+});

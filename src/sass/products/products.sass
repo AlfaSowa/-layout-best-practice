@@ -36,21 +36,21 @@
         bottom: 0
         left: 0
         transform: translateY(50%)
-        z-index: 3
+        z-index: 3    
+    &__btn
+        border-color: $second-color
+        color: $second-color
+        position: relative
         &:before,
         &:after
             content: ''
-            width: 100%
+            width: 400%
             height: 2px
             position: absolute
             top: 50%
             transform: translateY(-50%)
             background: $second-color
         &:before
-            right: calc(50% + 55px)
+            right: calc(100% + 10px)
         &:after
-            left: calc(50% + 55px)
-    
-    &__btn
-        border-color: $second-color
-        color: $second-color
+            left: calc(100% + 10px)

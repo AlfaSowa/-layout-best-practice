@@ -8,22 +8,21 @@ $grid_grap-left-right: 10px
     align-content: flex-start
 
     &__item
-        flex: 1 0 100%
-        max-width: 100%
+        flex: 0 0 100%
         padding: #{$grid_grap-top-bottom} #{$grid_grap-left-right}
 
         @include desctop
-            flex: 1 0 25%
-            max-width: 25%
+            flex: 0 0 25%
+        
+        @include table
+            flex: 0 0 33.3333%
 
     &--adapt
         .grid__item
-            flex: 1 0 50%
-            max-width: 50%
+            flex: 0 0 50%
             padding: 0
             @include desctop
-                flex: 1 0 20%
-                max-width: 20%
+                flex: 0 0 20%
 
         .card
             padding: 58% 0 0 0
@@ -39,5 +38,19 @@ $grid_grap-left-right: 10px
 .card
     position: relative
     cursor: pointer
+
+.slide
+    max-width: 250px
+    background: #f1f1f1
+    margin: 0 auto
+    border: 1px solid #000
+    min-height: 400px
+    max-height: 400px
+    &__img
+        height: 200px
+        background: #000
+    &__content
+        padding: 20px
+
 
 

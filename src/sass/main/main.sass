@@ -5,8 +5,7 @@
         padding: 0 20px
 
     &__left
-        flex: 1 0 400px 
-        max-width: 400px 
+        flex: 0 0 400px 
         height: 100px
         background: #000
     &__right
@@ -24,10 +23,6 @@
         color: $font-second-color
         font-weight: 400
         font-size: 1.5rem
-        @media ( max-width: 1200px )
-            padding: 0 0 0 5%
-            
-
         &:before,
         &:after
             content: ''
@@ -42,6 +37,11 @@
             margin-left: calc(-200% - 15px)
         &:after
             margin-left: 15px
+
+        @include mobile
+            padding: 0
+            font-size: 1rem
+            text-align: center
 
 .details
     display: flex
