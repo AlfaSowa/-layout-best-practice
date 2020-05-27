@@ -108,12 +108,14 @@ galeryModalClose.addEventListener("click", () => {
 });
 
 //slider
-let breakpointSlick = 768;
+let breakpointSlick = 1200;
 
 function slickInit() {
     $(".slider").slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
+        arrows: false,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 9999,
@@ -122,19 +124,13 @@ function slickInit() {
             {
                 breakpoint: breakpointSlick,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 },
             },
         ],
     });
 }
-
 slickInit();
 
 let media = window.matchMedia(`(max-width: ${breakpointSlick}px)`);
-
-media.addEventListener("change", () => {
-    if (window.innerWidth < breakpointSlick) {
-        slickInit();
-    }
-});
+media.addListener(slickInit);
