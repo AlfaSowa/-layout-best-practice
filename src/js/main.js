@@ -107,7 +107,34 @@ galeryModalClose.addEventListener("click", () => {
     galeryModal.classList.remove("galery__modal--active");
 });
 
-$(".slider").slick({
-    infinite: true,
-    slidesToShow: 3,
+//slider
+let breakpointSlick = 768;
+
+function slickInit() {
+    $(".slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick",
+            },
+            {
+                breakpoint: breakpointSlick,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    });
+}
+
+slickInit();
+
+let media = window.matchMedia(`(max-width: ${breakpointSlick}px)`);
+
+media.addEventListener("change", () => {
+    if (window.innerWidth < breakpointSlick) {
+        slickInit();
+    }
 });
