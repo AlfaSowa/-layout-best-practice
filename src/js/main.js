@@ -108,7 +108,8 @@ galeryModalClose.addEventListener("click", () => {
 });
 
 //slider
-let breakpointSlick = 1200;
+let breakpointTable = 1200;
+let breakpointMobile = 768;
 
 function slickInit() {
     $(".slider").slick({
@@ -122,9 +123,15 @@ function slickInit() {
                 settings: "unslick",
             },
             {
-                breakpoint: breakpointSlick,
+                breakpoint: breakpointTable,
                 settings: {
                     slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: breakpointMobile,
+                settings: {
+                    slidesToShow: 1,
                 },
             },
         ],
@@ -132,5 +139,8 @@ function slickInit() {
 }
 slickInit();
 
-let media = window.matchMedia(`(max-width: ${breakpointSlick}px)`);
-media.addListener(slickInit);
+let table = window.matchMedia(`(max-width: ${breakpointTable}px)`);
+let mobile = window.matchMedia(`(max-width: ${breakpointMobile}px)`);
+
+table.addListener(slickInit);
+mobile.addListener(slickInit);
