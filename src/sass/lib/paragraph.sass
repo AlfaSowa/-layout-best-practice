@@ -1,4 +1,17 @@
 .paragraph
-    p
-        &:not(:last-child)
-            margin: 0 0 20px 0
+    >:not(:last-child)
+        margin: 0 0 20px 0
+
+    .blockquote
+        padding: 20px
+        background: $details-color
+        display: flex
+        border-radius: 10px
+        &__icon
+            flex: 1 0 30px
+            max-width: 30px
+            height: 30px
+            margin: 0 10px 0 0
+            fill: $second-color
+            stroke: $second-color
+            stroke-width: 2

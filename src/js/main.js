@@ -26,21 +26,25 @@ burgerBtn.addEventListener("click", () => {
 });
 
 //tabs ================================
-let tabs = document.querySelectorAll(".tab");
-let tabsContent = document.querySelectorAll(".tab__content");
+let tabs = document.querySelectorAll("[data-tabs]");
 
-tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-        tabs.forEach((item) => {
-            item.classList.contains("tab--active") ? item.classList.remove("tab--active") : null;
+tabs.forEach((item) => {
+    let itemTabs = item.querySelectorAll(".tab");
+    let itemTabsContent = item.querySelectorAll(".tab__content");
+
+    itemTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            itemTabs.forEach((elem) => {
+                elem.classList.contains("tab--active") ? elem.classList.remove("tab--active") : null;
+            });
+
+            itemTabsContent.forEach((elem) => {
+                elem.classList.contains("tab__content--active") ? elem.classList.remove("tab__content--active") : null;
+                elem.dataset.id === tab.dataset.id ? elem.classList.add("tab__content--active") : null;
+            });
+
+            tab.classList.add("tab--active");
         });
-
-        tabsContent.forEach((item) => {
-            item.classList.contains("tab__content--active") ? item.classList.remove("tab__content--active") : null;
-            item.dataset.id === tab.dataset.id ? item.classList.add("tab__content--active") : null;
-        });
-
-        tab.classList.add("tab--active");
     });
 });
 
