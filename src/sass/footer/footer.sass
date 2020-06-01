@@ -1,2 +1,56 @@
 .footer
     padding: 50px 0 0 0
+    position: relative
+
+$arrow-height: 50px
+$arrow-width: 30px
+.arrow
+    position: absolute
+    height: $arrow-height * 2
+    display: flex
+    overflow: hidden
+    &__content
+        width: 400px
+        position: relative
+        padding: 0 calc(#{$arrow-width} + #{$arrow-width} / 5) 0 0
+        background: $second-color
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            border: $arrow-height solid transparent
+            border-left: $arrow-width solid #444
+            border-right: calc(#{$arrow-width} / 5) solid transparent
+            z-index: 10
+        &:before  
+            border: $arrow-height + 10px solid transparent
+            border-left: calc(#{$arrow-width} + #{$arrow-width} / 5) solid red
+            border-right: 0 solid transparent
+        
+        &-img
+            background: #444
+            height: 100%
+
+
+    &__add
+        width: calc(#{$arrow-width} + #{$arrow-width} / 5)
+        position: relative
+        z-index: -2
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            border: $arrow-height solid transparent
+            border-left: $arrow-width solid $second-color
+            border-right: calc(#{$arrow-width} / 5) solid transparent
+            z-index: 10
+        &:before  
+            border: $arrow-height + 10px solid transparent
+            border-left: calc(#{$arrow-width} + #{$arrow-width} / 5) solid red
+            border-right: 0 solid transparent

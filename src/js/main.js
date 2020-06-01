@@ -1,18 +1,31 @@
-let modal = document.querySelector(".modal");
-let btnShowModal = document.querySelectorAll(".btn__modal");
-let closeModal = document.querySelectorAll(".modal__close");
+//popups
+let popups = document.querySelectorAll(".popup");
+let btnsShowPopup = document.querySelectorAll("[data-popup]:not(.popup");
 
-btnShowModal.forEach((btn) => {
+togglePopup = (item) => {
+    document.body.classList.toggle("fixed");
+    item.classList.toggle("popup--active");
+};
+
+btnsShowPopup.forEach((btn) => {
     btn.addEventListener("click", () => {
-        document.body.classList.add("fixed");
-        modal.classList.add("modal--active");
+        popups.forEach((item) => {
+            if (item.dataset.popup == btn.dataset.popup) {
+                togglePopup(item);
+            }
+        });
     });
 });
 
-closeModal.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        document.body.classList.remove("fixed");
-        modal.classList.remove("modal--active");
+popups.forEach((item) => {
+    item.querySelector(".popup__close").addEventListener("click", () => {
+        togglePopup(item);
+    });
+
+    item.addEventListener("click", (e) => {
+        if (!e.target.closest(".popup__inner")) {
+            togglePopup(item);
+        }
     });
 });
 
@@ -91,56 +104,56 @@ anchors.forEach((anchor) => {
     });
 });
 
-//галерея
-let galeryImgs = document.querySelectorAll(".galery__img");
-let galeryModal = document.querySelector(".galery__modal");
-let galeryModalClose = document.querySelector(".galery__modal-close");
+//galery
+// let galeryImgs = document.querySelectorAll(".galery__img");
+// let galeryModal = document.querySelector(".galery__modal");
+// let galeryModalClose = document.querySelector(".galery__modal-close");
 
-galeryImgs.forEach((img) => {
-    img.addEventListener("click", () => {
-        galeryModal.querySelector(".galery__modal-img img").src = `./img/${img.dataset.img}.jpg`;
-        galeryModal.classList.add("galery__modal--active");
-    });
-});
+// galeryImgs.forEach((img) => {
+//     img.addEventListener("click", () => {
+//         galeryModal.querySelector(".galery__modal-img img").src = `./img/${img.dataset.img}.jpg`;
+//         galeryModal.classList.add("galery__modal--active");
+//     });
+// });
 
-galeryModalClose.addEventListener("click", () => {
-    galeryModal.classList.remove("galery__modal--active");
-});
+// galeryModalClose.addEventListener("click", () => {
+//     galeryModal.classList.remove("galery__modal--active");
+// });
 
 //slider
-let breakpointTable = 1200;
-let breakpointMobile = 768;
+// let breakpointTable = 1200;
+// let breakpointMobile = 768;
 
-function slickInit() {
-    $(".slider").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 9999,
-                settings: "unslick",
-            },
-            {
-                breakpoint: breakpointTable,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: breakpointMobile,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    });
-}
-slickInit();
+// function slickInit() {
+//     $(".slider").slick({
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         arrows: false,
+//         infinite: false,
+//         responsive: [
+//             {
+//                 breakpoint: 9999,
+//                 settings: "unslick",
+//             },
+//             {
+//                 breakpoint: breakpointTable,
+//                 settings: {
+//                     slidesToShow: 2,
+//                 },
+//             },
+//             {
+//                 breakpoint: breakpointMobile,
+//                 settings: {
+//                     slidesToShow: 1,
+//                 },
+//             },
+//         ],
+//     });
+// }
+// slickInit();
 
-let table = window.matchMedia(`(max-width: ${breakpointTable}px)`);
-let mobile = window.matchMedia(`(max-width: ${breakpointMobile}px)`);
+// let table = window.matchMedia(`(max-width: ${breakpointTable}px)`);
+// let mobile = window.matchMedia(`(max-width: ${breakpointMobile}px)`);
 
-table.addListener(slickInit);
-mobile.addListener(slickInit);
+// table.addListener(slickInit);
+// mobile.addListener(slickInit);

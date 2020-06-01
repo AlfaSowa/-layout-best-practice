@@ -28,7 +28,6 @@
             .logo {
                 display: flex;
                 align-items: center;
-                margin: 0 auto 0 0;
                 text-transform: uppercase;
                 font-weight: 700;
             }
@@ -85,6 +84,7 @@
                             d="m105.251 325.938c5.523 0 10-4.477 10-10s-4.477-10-10-10h-.007c-5.523 0-9.996 4.477-9.996 10s4.48 10 10.003 10z"
                         />
                     </symbol>
+
                     <symbol viewBox="0 0 30 30" id="blockquote">
                         <path
                             fill="none"
@@ -99,6 +99,15 @@
                             d="M22.4132334,15.108296 C22.1606112,16.5264116 21.4259741,17.8504841 20.2093222,19.0805133 C18.9926703,20.3105425 18.2026772,20.5063919 17.8393431,19.6680616 C18.8850683,19.3067493 19.5481553,18.7451885 19.8286042,17.9833793 C20.0299135,17.4365439 20.0867207,16.9647736 19.9990258,16.5680683 C19.8323026,16.5885589 19.6695789,16.5991425 19.517815,16.5991425 C18.9111528,16.5991425 18.3516678,16.4516371 17.8393431,16.1566219 C17.3270183,15.8616067 16.9213736,15.4613372 16.6223965,14.9558014 C16.3234195,14.4502656 16.1739332,13.8981944 16.1739332,13.2995713 C16.1739332,12.7009481 16.3234195,12.148877 16.6223965,11.6433412 C16.9213736,11.1378054 17.3270183,10.7375358 17.8393431,10.4425206 C18.3516678,10.1475054 18.9111528,10 19.517815,10 C20.1244771,10 20.6839622,10.1475054 21.1962869,10.4425206 C21.7086116,10.7375358 21.9001428,10.91734 22.1991198,11.4243079 C22.4980969,11.9284116 22.6761001,12.4644545 22.6761001,13.0630776 C22.6761001,13.6617007 22.7122105,14.6027602 22.4132334,15.108296 Z"
                         ></path>
                     </symbol>
+
+                    <symbol viewBox="0 0 365.71733 365" id="cross">
+                        <path
+                            d="m356.339844 296.347656-286.613282-286.613281c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503906-12.5 32.769532 0 45.25l286.613281 286.613282c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082032c12.523438-12.480468 12.523438-32.75.019532-45.25zm0 0"
+                        />
+                        <path
+                            d="m295.988281 9.734375-286.613281 286.613281c-12.5 12.5-12.5 32.769532 0 45.25l15.082031 15.082032c12.503907 12.5 32.769531 12.5 45.25 0l286.632813-286.59375c12.503906-12.5 12.503906-32.765626 0-45.246094l-15.082032-15.082032c-12.5-12.523437-32.765624-12.523437-45.269531-.023437zm0 0"
+                        />
+                    </symbol>
                 </defs>
             </svg>
         </div>
@@ -106,7 +115,7 @@
         <header class="header">
             <div class="header__top">
                 <div class="header__container container">
-                    <a class="logo" href="#">
+                    <a class="logo header__logo" href="#">
                         <div class="logo__icon">
                             <svg><use xlink:href="#logo"></use></svg>
                         </div>
@@ -114,7 +123,7 @@
                         <span class="logo__text">Logo</span>
                     </a>
 
-                    <nav class="menu">
+                    <nav class="menu header__menu">
                         <ul class="menu__list">
                             <li class="menu__item">
                                 <a class="menu__link" href="#grid">grid</a>
@@ -134,12 +143,16 @@
                         </ul>
                     </nav>
 
-                    <div class="social">
+                    <div class="social header__social">
                         <div class="social__item"></div>
                         <div class="social__item"></div>
                     </div>
 
-                    <div class="burger">
+                    <div class="order">
+                        <button class="btn btn--revers" data-popup="order">order</button>
+                    </div>
+
+                    <div class="burger header__burger">
                         <div class="burger__item"></div>
                         <div class="burger__item"></div>
                         <div class="burger__item"></div>
@@ -173,7 +186,8 @@
         </header>
 
         <main class="main">
-            <section class="section" id="slider">
+            <!-- slider section -->
+            <!-- <section class="section" id="slider">
                 <h2 class="section__title">Слайдер</h2>
 
                 <div class="section__body container">
@@ -218,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- grid section -->
             <section class="section" id="grid">
                 <h2 class="section__title">Сетка на flexbox. Галерея</h2>
@@ -558,22 +572,136 @@
         </main>
 
         <!-- <footer class="footer">
-            <div class="map">
-                <div class="map__legend"></div>
-                <div class="map__place"></div>
+            <div class="arrow">
+                <div class="arrow__content">
+                    <div class="arrow__content-img"></div>
+                </div>
+                <div class="arrow__add"></div>
             </div>
         </footer> -->
 
-        <div class="galery__modal">
-            <div class="galery__modal-inner">
-                <div class="galery__modal-close"></div>
-                <div class="galery__modal-img">
-                    <img src="./img/img1.jpg" alt="img" />
+        <div class="popup" data-popup="order">
+            <div class="popup__inner">
+                <div class="popup__content">
+                    <form class="form" action="">
+                        <div class="form__header">
+                            <div class="form__title">Form title</div>
+                            <div class="popup__close form__close">
+                                <svg><use xlink:href="#cross"></use></svg>
+                            </div>
+                        </div>
+
+                        <div class="form__content">
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <span class="form__label-title">first name</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+
+                                <label class="form__label">
+                                    <span class="form__label-title">last name</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <span class="form__label-title">label title</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <span class="form__label-title">label title</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">label title</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">label title</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                            </div>
+
+                            <div class="form__row form__row--double">
+                                <label class="form__label">
+                                    <input class="form__input" name="radio" type="radio" placeholder="form input" />
+                                    <span class="form__input-fake"></span>
+                                    <span class="form__input-title"
+                                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam vitae harum ratione
+                                        laudantium dolores maiores qui ex eum dolorem? Temporibus voluptates obcaecati velit ea
+                                        mollitia asperiores. Quidem cum, eaque delectus culpa reiciendis aspernatur voluptatem
+                                        architecto velit vel dolorum vitae iure, cumque ducimus blanditiis a soluta id omnis, enim
+                                        quasi nulla qui officia commodi excepturi perspiciatis.</span
+                                    >
+                                </label>
+                                <label class="form__label">
+                                    <input class="form__input" name="radio" type="radio" placeholder="form input" />
+                                    <span class="form__input-fake"></span>
+                                    <span class="form__input-title">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+                                </label>
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__label form__label--half">
+                                    <span class="form__label-title">label title</span>
+                                    <input class="form__input" type="text" placeholder="form input" />
+                                </label>
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <input class="form__input" type="checkbox" placeholder="form input" />
+                                    <span class="form__input-title"
+                                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </span>
+                                    <span class="form__input-fake"></span>
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <input class="form__input" type="checkbox" placeholder="form input" />
+                                    <span class="form__input-title"
+                                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nesciunt! onsectetur
+                                        adipisicing elit. Maxime, nesciun Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maxime, nesciunt! onsectetur adipisicing elit. Maxime, nesciun</span
+                                    >
+                                    <span class="form__input-fake"></span>
+                                </label>
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__label">
+                                    <input class="form__input" type="checkbox" placeholder="form input" />
+                                    <span class="form__input-fake"></span>
+                                    <span class="form__input-title"
+                                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus quo
+                                        officia, nesciunt odio natus recusandae exercitationem quod facilis obcaecati repellendus
+                                        aut reiciendis, quibusdam eius enim eaque omnis quos perferendis tempora quas nulla.
+                                        Deserunt ea aut fugit sequi est cupiditate vel quae, laboriosam autem quidem numquam quam
+                                        ut recusandae quia?</span
+                                    >
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__footer">
+                            <div class="form__actions">
+                                <button class="btn form__actions-btn">Order</button>
+                                <button class="btn form__actions-btn">Other</button>
+                            </div>
+
+                            <div class="form__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, veniam!</div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script> -->
     </body>
 </html>
