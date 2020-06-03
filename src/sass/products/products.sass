@@ -3,26 +3,69 @@
 
     &__card
         position: relative
+        border-top: 2px solid $second-color
+        border-left: 2px solid $second-color
+        border-right: 2px solid $second-color
+        transition: transform .2s ease-in-out
+        @include desctop
+            &:hover
+                transform: translateY(-8px)
 
     &__img
-        position: absolute
-        top: 0
-        left: 0
-        height: 200px
-        z-index: 1
-        transition: all .2s ease-in-out
+        height: 150px
         img
             object-fit: cover
             object-position: 0 0
 
+    &__info
+        position: absolute
+        right: 10px
+        top: 10px
+        border-radius: 50%
+        width: 20px
+        height: 20px
+        background: $second-color
+        color: $font-add-color
+        &-content
+            opacity: 0
+            border-radius: 5px
+            pointer-events: none
+            position: absolute
+            right: 50%
+            top: 100%
+            width: 120px
+            background: $second-color
+            padding: 8px
+            font-size: .6rem
+            transition: all .2s ease-in-out
+        &:hover &-content
+            opacity: 1
+            top: calc(100% + 8px)
+
     &__content
         position: relative
-        height: 300px
+        display: flex
+        flex-direction: column
+        height: 200px
         z-index: 2
-        border-top: 2px solid $second-color
-        border-left: 2px solid $second-color
-        border-right: 2px solid $second-color
-        padding: 0 0 25px 0
+        padding: 8px 10px 25px 10px
+
+
+        &-title
+            font-size: .9rem
+            font-weight: 600
+            margin: 0 0 8px 0
+            text-align: center
+        &-text
+            font-size: 0.7rem
+            flex: 1
+            overflow: hidden
+            margin: 0 0 8px 0
+        
+        &-data
+            height: 30px
+
+        
  
     &__bottom
         position: absolute

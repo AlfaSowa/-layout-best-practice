@@ -1,12 +1,29 @@
 .paragraph
-    >:not(:last-child)
+    >:last-child
+        margin-bottom: 0
+    p
         margin: 0 0 20px 0
 
+    img
+        max-width: 400px
+        height: 300px
+        object-fit: cover
+        object-position: 0 0
+        float: left
+        margin: 0 20px 20px 0
+        clear: both
+        display: block
+        @include mobile
+            float: none
+            margin: 0 auto 20px
+            
     .blockquote
+        clear: both
         padding: 20px
         background: $details-color
         display: flex
         border-radius: 10px
+        margin: 0 0 20px 0
         &__icon
             flex: 1 0 30px
             max-width: 30px
