@@ -1,19 +1,30 @@
 .header
     &__container
-        height: $header-top-main
         position: relative
+        flex-wrap: wrap
+        padding: 10px 0
     &__top
         position: fixed
         width: 100%
         padding: 0 8px
         background: $second-color
         z-index: 100
+
     &__bottom
-        padding: $header-top-main 0 0 0
+        padding: 55px 0 0 0
         background: $details-color
+        @include mobile
+            padding: 95px 0 0 0
     
+    &__social
+        margin: 0 20px 0 0
+        @include mobile
+            margin: 0 auto 0 0
     &__logo
         margin: 0 auto 0 0
+        @include mobile
+            margin: 0 0 10px 0
+            flex: 0 0 100%
     
     &__menu
         margin: 0 20px 0 0

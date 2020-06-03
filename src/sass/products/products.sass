@@ -3,19 +3,17 @@
 
     &__card
         position: relative
-        &:hover
-            .products__img
-                height: 200px
 
     &__img
         position: absolute
         top: 0
         left: 0
-        background: #727070
-        height: 0
-        width: 100%
+        height: 200px
         z-index: 1
         transition: all .2s ease-in-out
+        img
+            object-fit: cover
+            object-position: 0 0
 
     &__content
         position: relative
