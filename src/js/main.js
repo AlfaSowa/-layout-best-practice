@@ -1,6 +1,6 @@
-//popups
+/* ================================== popup ================================== */
 let popups = document.querySelectorAll(".popup");
-let btnsShowPopup = document.querySelectorAll("[data-popup]:not(.popup");
+let btnsShowPopup = document.querySelectorAll("[data-popup]:not(.popup)");
 
 togglePopup = (item) => {
     document.body.classList.toggle("fixed");
@@ -29,7 +29,7 @@ popups.forEach((item) => {
     });
 });
 
-//burger ================
+/* ================================== burger ================================== */
 let burgerBtn = document.querySelector(".burger");
 let headerMenu = document.querySelector(".menu");
 
@@ -38,7 +38,7 @@ burgerBtn.addEventListener("click", () => {
     headerMenu.classList.toggle("menu--active");
 });
 
-//tabs ================================
+/* ================================== tabs ================================== */
 let tabs = document.querySelectorAll("[data-tabs]");
 
 tabs.forEach((item) => {
@@ -61,7 +61,7 @@ tabs.forEach((item) => {
     });
 });
 
-//плавный переход по якорям
+/* ================================== anchors ================================== */
 let anchors = document.querySelectorAll('a[href*="#"]');
 
 function smoothScrol(blockOffsetTop) {

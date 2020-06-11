@@ -1,0 +1,39 @@
+.galery
+    margin: 0 auto
+    max-width: $grid-size
+
+    @media ( min-width: $grid-size * 2 + 50px )
+        max-width: $grid-size * 2
+
+    @media ( min-width: $grid-size * 3 + 50px )
+        max-width: $grid-size * 3
+
+    @media ( min-width: $grid-size * 4 + 50px )
+        max-width: $grid-size * 4
+
+    @media ( min-width: $grid-size * 5 + 50px )
+        max-width: $grid-size * 5
+        
+
+    &__item
+        flex: 0 0 $grid-size
+        height: $grid-size
+        padding: 0
+
+    &__card
+        display: flex
+        flex-direction: column
+        padding: 18px
+        height: 100%
+        background: $details-color
+        &-title
+            margin: 0 0 8px 0
+            text-transform: uppercase
+            font-size: .8rem
+            font-weight: 600
+        
+        &-content
+            flex: 1
+            font-size: .7rem
+            font-weight: 400
+            overflow: hidden
