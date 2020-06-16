@@ -103,3 +103,19 @@ anchors.forEach((anchor) => {
         smoothScrol(blockOffsetTop);
     });
 });
+
+let galeryCard = document.querySelector(".galery__card-content");
+let galeryCardHeight = galeryCard.clientHeight;
+let span = document.createElement("span");
+galeryCard.append(span);
+
+const string = "asda sdasd";
+
+function spanAddString() {
+    span.innerHTML += `${string} `;
+
+    if (span.offsetHeight <= galeryCard.clientHeight) {
+        spanAddString();
+    }
+}
+spanAddString();
