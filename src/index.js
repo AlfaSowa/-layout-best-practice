@@ -1,6 +1,7 @@
 // import 'normalize.css';
 import "./sass/style.sass";
 import "./js/main";
+import sprite from "./img/sprite.svg";
 
 import img1 from "./img/img1.jpg";
 import img2 from "./img/img2.jpg";
